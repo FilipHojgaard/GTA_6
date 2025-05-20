@@ -1,0 +1,8 @@
+~ start
+Ida Sofie (over phone): Oh hi.. new employer. Sorry I forgot your name....
+Ida Sofie (over phone): You are joining in a very awkward time. Unfortunately it seems your new boss just died? Not sure. 
+Ida Sofie (over phone): Please, go figure this thing out. This will be your first task. 
+- Ok
+	=> END
+- What? I quit
+	Ida Sofie (over phone): Sure you can quit after you figure this thing out. => END
