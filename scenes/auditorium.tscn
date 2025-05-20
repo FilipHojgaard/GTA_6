@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccf2fn8mspcdj"]
+[gd_scene load_steps=3 format=3 uid="uid://ccf2fn8mspcdj"]
 
 [ext_resource type="Texture2D" uid="uid://dwbmlvdunnywf" path="res://assets/backgrounds/auditorium pix.png" id="1_w616x"]
+[ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_rwbqi"]
 
 [node name="auditorium" type="Node2D"]
 
@@ -10,3 +11,6 @@
 position = Vector2(13, -24)
 scale = Vector2(0.76416, 0.76416)
 texture = ExtResource("1_w616x")
+
+[node name="inventory" parent="." instance=ExtResource("2_rwbqi")]
+position = Vector2(639, 372)
