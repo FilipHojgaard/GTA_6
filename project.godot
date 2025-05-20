@@ -14,3 +14,7 @@ config/name="Test"
 run/main_scene="uid://2awt71o4xy5o"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Singleton="*res://singleton/singleton.gd"
