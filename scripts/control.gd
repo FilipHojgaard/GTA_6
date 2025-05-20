@@ -12,5 +12,5 @@ func _ready() -> void:
 	cup.cup_sig.connect(signal_function)
 	print("ready")
 
-func picked_up_flashlight():
-	inventory['flashlight'] = true
+func signal_function():
+	print("signal worked - im from the control node")
