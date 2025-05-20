@@ -1,0 +1,16 @@
+extends Node2D
+
+@onready var cup: Area2D = $"../cup"
+
+var inventory = {
+	"keys" = false,
+	"flashlight" = false
+}
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	cup.cup_sig.connect(signal_function)
+	print("ready")
+
+func picked_up_flashlight():
+	inventory['flashlight'] = true

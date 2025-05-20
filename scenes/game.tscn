@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://2awt71o4xy5o"]
+
+[ext_resource type="PackedScene" uid="uid://dbfrwsoyscb3m" path="res://scenes/cup.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/control.tscn" id="2_yqjtg"]
+
+[node name="Game" type="Node2D"]
+
+[node name="cup" parent="." instance=ExtResource("1_uwrxv")]
+position = Vector2(857, 596)
+
+[node name="control" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(1459, 1054)
