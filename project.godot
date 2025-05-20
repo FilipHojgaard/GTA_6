@@ -18,3 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Singleton="*res://singleton/singleton.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
