@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccf2fn8mspcdj"]
+[gd_scene load_steps=6 format=3 uid="uid://ccf2fn8mspcdj"]
 
 [ext_resource type="Texture2D" uid="uid://dwbmlvdunnywf" path="res://assets/backgrounds/auditorium pix.png" id="1_w616x"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_rwbqi"]
+[ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="3_5ntih"]
+[ext_resource type="Script" uid="uid://y4kr7jsa0lq2" path="res://scenes/arrow_to_start.gd" id="3_38lhl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_38lhl"]
+radius = 47.0
 
 [node name="auditorium" type="Node2D"]
 
@@ -14,3 +19,16 @@ texture = ExtResource("1_w616x")
 
 [node name="inventory" parent="." instance=ExtResource("2_rwbqi")]
 position = Vector2(639, 372)
+
+[node name="arrow_to_start" type="Area2D" parent="."]
+script = ExtResource("3_38lhl")
+
+[node name="Sprite2D" type="Sprite2D" parent="arrow_to_start"]
+position = Vector2(-471, -318)
+rotation = 3.14159
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_5ntih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="arrow_to_start"]
+position = Vector2(-470, -316)
+shape = SubResource("CircleShape2D_38lhl")
