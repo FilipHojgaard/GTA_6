@@ -1,15 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://2awt71o4xy5o"]
+[gd_scene load_steps=8 format=3 uid="uid://2awt71o4xy5o"]
 
 [ext_resource type="PackedScene" uid="uid://dbfrwsoyscb3m" path="res://scenes/cup.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/control.tscn" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="3_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://c2veh68b2max4" path="res://assets/backgrounds/SUF død på bord lang pix.png" id="3_lnu2h"]
+[ext_resource type="Script" uid="uid://oteacqjyawqv" path="res://scenes/arrow_to_right_hall.gd" id="4_iywne"]
 
-[node name="Game" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_iywne"]
+radius = 63.0079
 
-[node name="cup" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(857, 596)
+[sub_resource type="CircleShape2D" id="CircleShape2D_p57ef"]
+radius = 168.76
+
+[node name="start" type="Node2D"]
 
 [node name="control" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(1459, 1054)
+position = Vector2(919, 498)
 
-[node name="cup2" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(239, 332)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(291, 138)
+
+[node name="SufDødPåBordLangPix" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(267, 102)
+scale = Vector2(0.773438, 0.773438)
+texture = ExtResource("3_lnu2h")
+
+[node name="arrow_to_left_hall" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="arrow_to_left_hall"]
+position = Vector2(-165, -185)
+rotation = 3.14159
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("3_lbhrr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="arrow_to_left_hall"]
+position = Vector2(-160, -181)
+shape = SubResource("CircleShape2D_iywne")
+
+[node name="arrow_to_right_hall" type="Area2D" parent="."]
+script = ExtResource("4_iywne")
+
+[node name="Sprite2D" type="Sprite2D" parent="arrow_to_right_hall"]
+position = Vector2(757, -175)
+scale = Vector2(0.375, 0.375)
+texture = ExtResource("3_lbhrr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="arrow_to_right_hall"]
+position = Vector2(757, -175)
+scale = Vector2(0.375, 0.375)
+shape = SubResource("CircleShape2D_p57ef")
+
+[node name="cup" parent="." instance=ExtResource("1_uwrxv")]
+position = Vector2(825, 229)

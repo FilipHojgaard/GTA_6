@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccf2fn8mspcdj"]
+
+[ext_resource type="Texture2D" uid="uid://dwbmlvdunnywf" path="res://assets/backgrounds/auditorium pix.png" id="1_w616x"]
+
+[node name="auditorium" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AuditoriumPix" type="Sprite2D" parent="."]
+position = Vector2(13, -24)
+scale = Vector2(0.76416, 0.76416)
+texture = ExtResource("1_w616x")

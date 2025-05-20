@@ -4,16 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://rb5ftcc8qcex" path="res://assets/sprites/juice.png" id="1_vafus"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7q2t1"]
-size = Vector2(317, 315)
+size = Vector2(178, 167)
 
 [node name="cup" type="Area2D"]
 script = ExtResource("1_7q2t1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-339.13, -338.5)
-scale = Vector2(0.333661, 0.333661)
+position = Vector2(-414.315, -413.685)
+scale = Vector2(0.185659, 0.185659)
 texture = ExtResource("1_vafus")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-340.5, -339.5)
+position = Vector2(-410, -413.5)
 shape = SubResource("RectangleShape2D_7q2t1")

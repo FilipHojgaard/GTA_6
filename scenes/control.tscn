@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgaku5310vt5q"]
+[gd_scene load_steps=3 format=3 uid="uid://cgaku5310vt5q"]
 
 [ext_resource type="Script" uid="uid://epcmamltceu4" path="res://scripts/control.gd" id="1_5p55f"]
+[ext_resource type="Texture2D" uid="uid://bc0vkdke3471j" path="res://assets/backgrounds/inventory.png" id="2_r67kn"]
 
 [node name="control" type="Node2D"]
 script = ExtResource("1_5p55f")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-285, -142.5)
+scale = Vector2(0.525, 0.525)
+texture = ExtResource("2_r67kn")
