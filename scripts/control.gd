@@ -10,7 +10,7 @@ var inventory = {
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	cup.cup_sig.connect(signal_function)
-	print("ready")
+	print("klar")
 
 func signal_function():
 	print("signal worked - im from the control node")
