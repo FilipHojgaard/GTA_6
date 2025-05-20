@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgaku5310vt5q"]
+[gd_scene load_steps=6 format=3 uid="uid://cgaku5310vt5q"]
 
 [ext_resource type="Script" uid="uid://epcmamltceu4" path="res://scripts/inventory.gd" id="1_5p55f"]
 [ext_resource type="Texture2D" uid="uid://bc0vkdke3471j" path="res://assets/backgrounds/inventory.png" id="2_r67kn"]
 [ext_resource type="Texture2D" uid="uid://rb5ftcc8qcex" path="res://assets/sprites/juice.png" id="3_brbbq"]
+[ext_resource type="Script" uid="uid://ddmtc61tf14dq" path="res://scenes/key_enlargen.gd" id="3_yyk2a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yyk2a"]
+size = Vector2(64, 64)
 
 [node name="inventory" type="Node2D"]
 script = ExtResource("1_5p55f")
@@ -15,9 +19,13 @@ scale = Vector2(0.525, 0.525)
 texture = ExtResource("2_r67kn")
 
 [node name="key" type="Area2D" parent="."]
-visible = false
+script = ExtResource("3_yyk2a")
 
 [node name="key" type="Sprite2D" parent="key"]
 position = Vector2(-438, -147)
 scale = Vector2(0.0688976, 0.0688976)
 texture = ExtResource("3_brbbq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="key"]
+position = Vector2(-438, -147)
+shape = SubResource("RectangleShape2D_yyk2a")
