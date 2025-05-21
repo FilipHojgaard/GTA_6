@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://cxuvgflfymdah" path="res://scripts/arrow_to_outside_kitchenette.gd" id="5_4mrby"]
 [ext_resource type="Script" uid="uid://5cqmt7sngp80" path="res://scripts/to_atrium.gd" id="6_5wf7x"]
 [ext_resource type="Script" uid="uid://dxxwv3l74ub7w" path="res://scripts/arrow_to_lounge.gd" id="6_hk2ef"]
-[ext_resource type="Script" uid="uid://jgtf1unmwur7" path="res://scripts/bloody_footstep_dialogue.gd" id="8_2leyr"]
+[ext_resource type="Script" path="res://scripts/bloody_footstep_dialogue.gd" id="8_2leyr"]
 [ext_resource type="Texture2D" uid="uid://bbxtmomtwo7u4" path="res://assets/sprites/bloody footprints pix.png" id="8_dxeio"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mrby"]
