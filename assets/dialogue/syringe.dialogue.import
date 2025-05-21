@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dadw54whu2hsi"
+path="res://.godot/imported/syringe.dialogue-4f080b619768cb5a8ad31988f83d73b0.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/syringe.dialogue"
+dest_files=["res://.godot/imported/syringe.dialogue-4f080b619768cb5a8ad31988f83d73b0.tres"]
+
+[params]
+
+defaults=true

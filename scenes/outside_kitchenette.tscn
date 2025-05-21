@@ -1,12 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://dfjhtkla41llf"]
+[gd_scene load_steps=14 format=3 uid="uid://dfjhtkla41llf"]
 
 [ext_resource type="Texture2D" uid="uid://cgbpuk7ykshoo" path="res://assets/backgrounds/kitchen outside pix.png" id="1_kfcrs"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_lh61v"]
-[ext_resource type="Script" uid="uid://sc0p5ofsur4" path="res://scenes/arrow_to_left_hall.gd" id="3_kfcrs"]
+[ext_resource type="Script" uid="uid://sc0p5ofsur4" path="res://scripts/arrow_to_left_hall.gd" id="3_kfcrs"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_owrlr"]
-[ext_resource type="Script" uid="uid://cesb6gduayfm" path="res://scenes/enter_kitchen.gd" id="5_owrlr"]
+[ext_resource type="Script" uid="uid://cesb6gduayfm" path="res://scripts/enter_kitchen.gd" id="5_owrlr"]
 [ext_resource type="Texture2D" uid="uid://dgneucrslgd2a" path="res://assets/sprites/swedish cake pix.png" id="5_yg0aa"]
 [ext_resource type="Texture2D" uid="uid://cifspjcd416rd" path="res://assets/sprites/red_mess.png" id="6_owrlr"]
+[ext_resource type="Script" uid="uid://d1p5d1l4pfubb" path="res://scripts/cake_through_window.gd" id="6_wrru5"]
+[ext_resource type="Script" uid="uid://cvwed7cnhre2c" path="res://scripts/red_mess_outside_kitchenette.gd" id="9_xgfrq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jac6f"]
 size = Vector2(130, 91)
@@ -14,7 +16,13 @@ size = Vector2(130, 91)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4trwu"]
 size = Vector2(355, 507)
 
-[node name="auditorium" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgfrq"]
+size = Vector2(133, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ng8ug"]
+size = Vector2(85, 79)
+
+[node name="outside_kitchenette" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -46,27 +54,41 @@ script = ExtResource("5_owrlr")
 position = Vector2(275.5, -163.5)
 shape = SubResource("RectangleShape2D_4trwu")
 
-[node name="cake" type="Sprite2D" parent="."]
+[node name="cake" type="Area2D" parent="."]
+script = ExtResource("6_wrru5")
+
+[node name="cake" type="Sprite2D" parent="cake"]
 position = Vector2(-453, 3)
 scale = Vector2(0.09375, 0.09375)
 texture = ExtResource("5_yg0aa")
 
-[node name="red_mess" type="Sprite2D" parent="."]
+[node name="red_mess" type="Sprite2D" parent="cake"]
 position = Vector2(-416, 44)
 scale = Vector2(0.09375, 0.09375)
 texture = ExtResource("6_owrlr")
 
-[node name="red_mess2" type="Sprite2D" parent="."]
+[node name="red_mess4" type="Sprite2D" parent="cake"]
+position = Vector2(-382, 28)
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("6_owrlr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cake"]
+position = Vector2(-428.5, 13)
+shape = SubResource("RectangleShape2D_xgfrq")
+
+[node name="red_mess" type="Area2D" parent="."]
+script = ExtResource("9_xgfrq")
+
+[node name="red_mess2" type="Sprite2D" parent="red_mess"]
 position = Vector2(-366, 287)
 scale = Vector2(0.09375, 0.09375)
 texture = ExtResource("6_owrlr")
 
-[node name="red_mess3" type="Sprite2D" parent="."]
+[node name="red_mess3" type="Sprite2D" parent="red_mess"]
 position = Vector2(-391, 310)
 scale = Vector2(0.09375, 0.09375)
 texture = ExtResource("6_owrlr")
 
-[node name="red_mess4" type="Sprite2D" parent="."]
-position = Vector2(-382, 28)
-scale = Vector2(0.09375, 0.09375)
-texture = ExtResource("6_owrlr")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="red_mess"]
+position = Vector2(-379.5, 296)
+shape = SubResource("RectangleShape2D_ng8ug")

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ccx0af4qioiu"
+path="res://.godot/imported/keyboard.dialogue-b1223fd4d8463b03756ca422f04d3fc0.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/keyboard.dialogue"
+dest_files=["res://.godot/imported/keyboard.dialogue-b1223fd4d8463b03756ca422f04d3fc0.tres"]
+
+[params]
+
+defaults=true

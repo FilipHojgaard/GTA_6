@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dokdumyw0mn8n"
+path="res://.godot/imported/bloody_footsteps_hallway.dialogue-1df19af7243cd929b6f6a287aa8b165b.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/bloody_footsteps_hallway.dialogue"
+dest_files=["res://.godot/imported/bloody_footsteps_hallway.dialogue-1df19af7243cd929b6f6a287aa8b165b.tres"]
+
+[params]
+
+defaults=true
