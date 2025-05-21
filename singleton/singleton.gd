@@ -12,3 +12,4 @@ var inventory = {
 
 func invoke_intro_played():
 	intro_played = true
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
