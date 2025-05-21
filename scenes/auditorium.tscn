@@ -1,12 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccf2fn8mspcdj"]
+[gd_scene load_steps=9 format=3 uid="uid://ccf2fn8mspcdj"]
 
 [ext_resource type="Texture2D" uid="uid://dwbmlvdunnywf" path="res://assets/backgrounds/auditorium pix.png" id="1_w616x"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_rwbqi"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="3_5ntih"]
 [ext_resource type="Script" uid="uid://dxxwv3l74ub7w" path="res://scripts/arrow_to_lounge.gd" id="3_38lhl"]
+[ext_resource type="Script" uid="uid://co8u2pp8va1v" path="res://scenes/keys_world.gd" id="5_ifciu"]
+[ext_resource type="Texture2D" uid="uid://bppobg6cm5psx" path="res://assets/sprites/keys.png" id="5_w56yj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_38lhl"]
 radius = 47.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ifciu"]
+radius = 54.0833
 
 [node name="203" type="Node2D"]
 
@@ -33,3 +38,15 @@ texture = ExtResource("3_5ntih")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="arrow_to_start"]
 position = Vector2(-291, -1.99984)
 shape = SubResource("CircleShape2D_38lhl")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("5_ifciu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(-458, 119)
+scale = Vector2(0.0952149, 0.0952149)
+texture = ExtResource("5_w56yj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-462, 116)
+shape = SubResource("CircleShape2D_ifciu")

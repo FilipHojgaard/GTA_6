@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://epcmamltceu4" path="res://scripts/inventory.gd" id="1_5p55f"]
 [ext_resource type="Texture2D" uid="uid://bc0vkdke3471j" path="res://assets/backgrounds/inventory.png" id="2_r67kn"]
-[ext_resource type="Texture2D" uid="uid://rb5ftcc8qcex" path="res://assets/sprites/juice.png" id="3_brbbq"]
 [ext_resource type="Script" uid="uid://ddmtc61tf14dq" path="res://scripts/key_enlargen.gd" id="3_yyk2a"]
+[ext_resource type="Texture2D" uid="uid://bppobg6cm5psx" path="res://assets/sprites/keys.png" id="4_uae8j"]
 [ext_resource type="Script" uid="uid://ctfliaoqgf35s" path="res://scenes/paper_dialogue.gd" id="5_uae8j"]
-[ext_resource type="Texture2D" uid="uid://b8tcgj52a1hu8" path="res://assets/sprites/paper.png" id="6_s887n"]
+[ext_resource type="Texture2D" uid="uid://dim4mx3g6dtv8" path="res://assets/sprites/paper_dmvo.png" id="6_uae8j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yyk2a"]
-size = Vector2(64, 64)
+size = Vector2(79, 83)
 
 [node name="inventory" type="Node2D"]
 script = ExtResource("1_5p55f")
@@ -24,22 +24,22 @@ texture = ExtResource("2_r67kn")
 script = ExtResource("3_yyk2a")
 
 [node name="key" type="Sprite2D" parent="key"]
-position = Vector2(-438, -147)
-scale = Vector2(0.0688976, 0.0688976)
-texture = ExtResource("3_brbbq")
+position = Vector2(-427.638, -136.638)
+scale = Vector2(0.0891363, 0.0891363)
+texture = ExtResource("4_uae8j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="key"]
-position = Vector2(-438, -147)
+position = Vector2(-428.5, -138.5)
 shape = SubResource("RectangleShape2D_yyk2a")
 
 [node name="paper" type="Area2D" parent="."]
-position = Vector2(92, 1)
+position = Vector2(124, 1)
 script = ExtResource("5_uae8j")
 
 [node name="paper" type="Sprite2D" parent="paper"]
-position = Vector2(-438, -147)
-scale = Vector2(0.0688976, 0.0688976)
-texture = ExtResource("6_s887n")
+position = Vector2(-438, -146)
+scale = Vector2(0.0852301, 0.0852301)
+texture = ExtResource("6_uae8j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paper"]
 position = Vector2(-438, -147)
