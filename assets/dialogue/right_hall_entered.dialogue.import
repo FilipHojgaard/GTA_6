@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dou1wwlahvljv"
+path="res://.godot/imported/right_hall_entered.dialogue-a1416123f0e8aa2af99f7048a912d734.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/right_hall_entered.dialogue"
+dest_files=["res://.godot/imported/right_hall_entered.dialogue-a1416123f0e8aa2af99f7048a912d734.tres"]
+
+[params]
+
+defaults=true

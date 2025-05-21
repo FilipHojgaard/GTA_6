@@ -1,0 +1,7 @@
+~ start
+if Singleton.right_hall_played == true:
+	=> END
+You: Balloon?! Who took the party to the office?
+You: Wow these computers look like they are from the 90's. Wonder if it actually works.
+do Singleton.invoke_right_hall_played() 
+=> END

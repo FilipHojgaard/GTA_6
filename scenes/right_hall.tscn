@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://b2jn2cyy5gw14"]
+[gd_scene load_steps=17 format=3 uid="uid://b2jn2cyy5gw14"]
 
 [ext_resource type="Texture2D" uid="uid://djxnmy28hp4pu" path="res://assets/backgrounds/right_floor.png" id="1_24sry"]
+[ext_resource type="Script" uid="uid://bx37i7lkuxtft" path="res://scenes/right_hall.gd" id="1_hexg2"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_prr3v"]
 [ext_resource type="Script" uid="uid://y4kr7jsa0lq2" path="res://scripts/arrow_to_start.gd" id="3_lqmso"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_45ka5"]
@@ -57,7 +58,8 @@ _data = {
 &"hall_balloon": SubResource("Animation_kk6be")
 }
 
-[node name="auditorium" type="Node2D"]
+[node name="right_hall" type="Node2D"]
+script = ExtResource("1_hexg2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

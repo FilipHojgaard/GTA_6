@@ -4,6 +4,7 @@ extends Node
 
 var intro_played = false
 var task_played = false
+var right_hall_played = false
 
 var inventory = {
 	"cup" = false,
@@ -17,3 +18,6 @@ func invoke_intro_played():
 
 func invoke_task_played():
 	task_played = true
+
+func invoke_right_hall_played():
+	right_hall_played = true
