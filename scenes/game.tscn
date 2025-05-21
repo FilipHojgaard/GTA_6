@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cimrdxu5ynf6m" path="res://scripts/intro.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dbfrwsoyscb3m" path="res://scenes/cup.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://c4m1ffxan5ccv" path="res://assets/backgrounds/suf_in_aquarium.png" id="3_gee14"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="3_lbhrr"]
-[ext_resource type="Texture2D" uid="uid://c2veh68b2max4" path="res://assets/backgrounds/SUF død på bord lang pix.png" id="3_lnu2h"]
 [ext_resource type="Script" uid="uid://sc0p5ofsur4" path="res://scripts/arrow_to_left_hall.gd" id="4_gee14"]
 [ext_resource type="Script" uid="uid://oteacqjyawqv" path="res://scripts/arrow_to_right_hall.gd" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://dpa2lhjetn73i" path="res://scenes/phone_call.tscn" id="7_u5sy4"]
@@ -26,9 +26,9 @@ position = Vector2(291, 138)
 
 [node name="SufDødPåBordLangPix" type="Sprite2D" parent="."]
 z_index = -10
-position = Vector2(267, 102)
-scale = Vector2(0.773438, 0.773438)
-texture = ExtResource("3_lnu2h")
+position = Vector2(288, 123)
+scale = Vector2(0.313359, 0.313359)
+texture = ExtResource("3_gee14")
 
 [node name="arrow_to_left_hall" type="Area2D" parent="."]
 script = ExtResource("4_gee14")
