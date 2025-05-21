@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2jn2cyy5gw14"]
+
+[ext_resource type="Texture2D" uid="uid://djxnmy28hp4pu" path="res://assets/backgrounds/right_floor.png" id="1_24sry"]
+[ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_prr3v"]
+[ext_resource type="Script" uid="uid://y4kr7jsa0lq2" path="res://scenes/arrow_to_start.gd" id="3_lqmso"]
+[ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_45ka5"]
+[ext_resource type="Script" uid="uid://bhmtcmu0tvo1j" path="res://scenes/to_desk.gd" id="5_prr3v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_38lhl"]
+radius = 47.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24sry"]
+size = Vector2(224.5, 199)
+
+[node name="auditorium" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AuditoriumPix" type="Sprite2D" parent="."]
+position = Vector2(13, -24)
+scale = Vector2(0.76416, 0.76416)
+texture = ExtResource("1_24sry")
+
+[node name="inventory" parent="." instance=ExtResource("2_prr3v")]
+position = Vector2(639, 372)
+
+[node name="arrow_to_start" type="Area2D" parent="."]
+script = ExtResource("3_lqmso")
+
+[node name="Sprite2D" type="Sprite2D" parent="arrow_to_start"]
+position = Vector2(-471, -318)
+rotation = 3.14159
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_45ka5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="arrow_to_start"]
+position = Vector2(-470, -316)
+shape = SubResource("CircleShape2D_38lhl")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("5_prr3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-329, 30)
+shape = SubResource("RectangleShape2D_24sry")
