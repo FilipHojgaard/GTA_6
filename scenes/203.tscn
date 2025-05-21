@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://x0hk7xipogwo"]
+[gd_scene load_steps=10 format=3 uid="uid://x0hk7xipogwo"]
 
 [ext_resource type="Texture2D" uid="uid://7wwmp4xuyhik" path="res://assets/backgrounds/203_background.png" id="1_lgy7i"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_7rqot"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_bscc8"]
 [ext_resource type="Texture2D" uid="uid://bludih0c4s0co" path="res://assets/sprites/speakers.png" id="5_7rqot"]
 [ext_resource type="AudioStream" uid="uid://c74fw1nhqleo1" path="res://assets/sfx/happy_birthday.mp3" id="6_j0xxd"]
+[ext_resource type="Texture2D" uid="uid://dmk775aylrbw5" path="res://assets/sprites/25_balloon.png" id="7_bscc8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_38lhl"]
 radius = 47.0
@@ -54,3 +55,8 @@ shape = SubResource("RectangleShape2D_j0xxd")
 [node name="HappyBirthday" type="AudioStreamPlayer" parent="Area2D"]
 stream = ExtResource("6_j0xxd")
 autoplay = true
+
+[node name="25Balloon" type="Sprite2D" parent="."]
+position = Vector2(295, -211)
+scale = Vector2(0.391113, 0.391113)
+texture = ExtResource("7_bscc8")

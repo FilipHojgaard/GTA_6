@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://2awt71o4xy5o"]
+[gd_scene load_steps=11 format=3 uid="uid://2awt71o4xy5o"]
 
 [ext_resource type="Script" uid="uid://cimrdxu5ynf6m" path="res://scripts/intro.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_yqjtg"]
@@ -6,13 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://sc0p5ofsur4" path="res://scripts/arrow_to_left_hall.gd" id="4_gee14"]
 [ext_resource type="Script" uid="uid://oteacqjyawqv" path="res://scripts/arrow_to_right_hall.gd" id="4_iywne"]
-[ext_resource type="PackedScene" uid="uid://dpa2lhjetn73i" path="res://scenes/phone_call.tscn" id="7_u5sy4"]
+[ext_resource type="Script" uid="uid://b22mi88yy0vt6" path="res://scenes/door_handle.gd" id="7_u5sy4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u5sy4"]
 size = Vector2(159, 121)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gee14"]
 size = Vector2(416, 306.667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tnpc"]
+size = Vector2(194.75, 175.5)
 
 [node name="start" type="Node2D"]
 script = ExtResource("1_p57ef")
@@ -55,5 +58,9 @@ position = Vector2(757, -174.5)
 scale = Vector2(0.375, 0.375)
 shape = SubResource("RectangleShape2D_gee14")
 
-[node name="phone_call" parent="." instance=ExtResource("7_u5sy4")]
-position = Vector2(37, 151)
+[node name="door_handle" type="Area2D" parent="."]
+script = ExtResource("7_u5sy4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door_handle"]
+position = Vector2(-63, 138)
+shape = SubResource("RectangleShape2D_0tnpc")

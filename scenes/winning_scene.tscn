@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvniprj0pla67"]
+[gd_scene load_steps=3 format=3 uid="uid://dvniprj0pla67"]
 
 [ext_resource type="Texture2D" uid="uid://dabyn861wk1rs" path="res://assets/backgrounds/winning scene pix.png" id="1_0rqyc"]
+[ext_resource type="AudioStream" uid="uid://c4fjwvyc4b6fx" path="res://assets/sfx/win_song.mp3" id="2_fpoli"]
 
 [node name="winning_scene" type="Node2D"]
 
@@ -10,3 +11,7 @@
 position = Vector2(13, -24)
 scale = Vector2(0.76416, 0.76416)
 texture = ExtResource("1_0rqyc")
+
+[node name="WinSong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_fpoli")
+autoplay = true
