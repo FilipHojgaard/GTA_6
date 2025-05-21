@@ -1,16 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfe7gjrx0pkp2"]
+[gd_scene load_steps=10 format=3 uid="uid://dfe7gjrx0pkp2"]
 
 [ext_resource type="Texture2D" uid="uid://cah5et5hn65qn" path="res://assets/backgrounds/desk_background.png" id="1_8atfi"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_vxfw4"]
 [ext_resource type="Script" uid="uid://oteacqjyawqv" path="res://scripts/arrow_to_right_hall.gd" id="3_8atfi"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_y0kep"]
 [ext_resource type="Script" uid="uid://bv3rujnkd2yow" path="res://scenes/syringe.gd" id="5_vxfw4"]
+[ext_resource type="Script" uid="uid://cbagolqr4qilt" path="res://scenes/keyboard.gd" id="6_sista"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sista"]
 size = Vector2(125, 91.9999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y0kep"]
 size = Vector2(231, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6cq47"]
+size = Vector2(290, 162)
 
 [node name="desk" type="Node2D"]
 
@@ -22,6 +26,7 @@ scale = Vector2(0.76416, 0.76416)
 texture = ExtResource("1_8atfi")
 
 [node name="inventory" parent="." instance=ExtResource("2_vxfw4")]
+z_index = 1
 position = Vector2(639, 372)
 
 [node name="to_right_hall" type="Area2D" parent="."]
@@ -44,3 +49,10 @@ script = ExtResource("5_vxfw4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="syringe"]
 position = Vector2(-264.5, 143)
 shape = SubResource("RectangleShape2D_y0kep")
+
+[node name="keyboard" type="Area2D" parent="."]
+script = ExtResource("6_sista")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="keyboard"]
+position = Vector2(33, 94)
+shape = SubResource("RectangleShape2D_6cq47")
