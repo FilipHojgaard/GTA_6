@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cwrivlwh1iiyk"
+path="res://.godot/imported/red_mess_outside_kitchenette.dialogue-48c89485a4371a1fc89e21ceb73330c3.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/red_mess_outside_kitchenette.dialogue"
+dest_files=["res://.godot/imported/red_mess_outside_kitchenette.dialogue-48c89485a4371a1fc89e21ceb73330c3.tres"]
+
+[params]
+
+defaults=true
