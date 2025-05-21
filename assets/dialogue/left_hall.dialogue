@@ -1,6 +1,6 @@
 ~ start
 if Singleton.left_hall_played == true:
 	=> END
-You: What a long hallway. I wnonder what is at the end.
+You: What a long hallway. I wnonder what is at the end. Is this blood on floor?? 
 do Singleton.invoke_left_hall_played() 
 => END
