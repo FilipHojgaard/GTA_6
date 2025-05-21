@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_vxfw4"]
 [ext_resource type="Script" uid="uid://oteacqjyawqv" path="res://scripts/arrow_to_right_hall.gd" id="3_8atfi"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_y0kep"]
-[ext_resource type="Script" path="res://scripts/syringe.gd" id="5_vxfw4"]
-[ext_resource type="Script" path="res://scripts/keyboard.gd" id="6_sista"]
-[ext_resource type="Script" path="res://scripts/screens.gd" id="7_y0kep"]
+[ext_resource type="Script" uid="uid://bv3rujnkd2yow" path="res://scripts/syringe.gd" id="5_vxfw4"]
+[ext_resource type="Script" uid="uid://cbagolqr4qilt" path="res://scripts/keyboard.gd" id="6_sista"]
+[ext_resource type="Script" uid="uid://be6t4hm6at8rf" path="res://scripts/screens.gd" id="7_y0kep"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sista"]
 size = Vector2(125, 91.9999)
