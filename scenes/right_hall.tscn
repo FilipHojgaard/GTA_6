@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b2jn2cyy5gw14"]
+[gd_scene load_steps=16 format=3 uid="uid://b2jn2cyy5gw14"]
 
 [ext_resource type="Texture2D" uid="uid://djxnmy28hp4pu" path="res://assets/backgrounds/right_floor.png" id="1_24sry"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_prr3v"]
@@ -18,6 +18,44 @@ size = Vector2(224.5, 199)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6xx5m"]
 radius = 64.5136
+
+[sub_resource type="Animation" id="Animation_kk6be"]
+resource_name = "hall_balloon"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 60)]
+}
+
+[sub_resource type="Animation" id="Animation_hexg2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_634gd"]
+_data = {
+&"RESET": SubResource("Animation_hexg2"),
+&"hall_balloon": SubResource("Animation_kk6be")
+}
 
 [node name="auditorium" type="Node2D"]
 
@@ -81,3 +119,9 @@ texture = ExtResource("7_45ka5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="balloon"]
 position = Vector2(-81, -262)
 shape = SubResource("CircleShape2D_6xx5m")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="balloon"]
+libraries = {
+&"": SubResource("AnimationLibrary_634gd")
+}
+autoplay = "hall_balloon"

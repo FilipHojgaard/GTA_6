@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://x0hk7xipogwo"]
+[gd_scene load_steps=13 format=3 uid="uid://x0hk7xipogwo"]
 
 [ext_resource type="Texture2D" uid="uid://7wwmp4xuyhik" path="res://assets/backgrounds/203_background.png" id="1_lgy7i"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_7rqot"]
@@ -13,6 +13,44 @@ radius = 47.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j0xxd"]
 size = Vector2(123, 190)
+
+[sub_resource type="Animation" id="Animation_bscc8"]
+resource_name = "speaker_animation"
+length = 0.38
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.366667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -10), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_r0qdm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cg43a"]
+_data = {
+&"RESET": SubResource("Animation_r0qdm"),
+&"speaker_animation": SubResource("Animation_bscc8")
+}
 
 [node name="auditorium" type="Node2D"]
 
@@ -39,24 +77,37 @@ texture = ExtResource("4_bscc8")
 position = Vector2(-470, -316)
 shape = SubResource("CircleShape2D_38lhl")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="speaker" type="Area2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="speaker"]
 position = Vector2(-190.75, 38.75)
 scale = Vector2(0.255371, 0.255371)
 texture = ExtResource("5_7rqot")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="speaker"]
 position = Vector2(-200.5, 39)
 shape = SubResource("RectangleShape2D_j0xxd")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area2D"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="speaker"]
 
-[node name="HappyBirthday" type="AudioStreamPlayer" parent="Area2D"]
+[node name="HappyBirthday" type="AudioStreamPlayer" parent="speaker"]
 stream = ExtResource("6_j0xxd")
 autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="speaker"]
+libraries = {
+&"": SubResource("AnimationLibrary_cg43a")
+}
+autoplay = "speaker_animation"
 
 [node name="25Balloon" type="Sprite2D" parent="."]
 position = Vector2(295, -211)
 scale = Vector2(0.391113, 0.391113)
+texture = ExtResource("7_bscc8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="25Balloon"]
+
+[node name="25Balloon2" type="Sprite2D" parent="."]
+position = Vector2(-137, -267)
+scale = Vector2(0.37299, 0.37299)
 texture = ExtResource("7_bscc8")
