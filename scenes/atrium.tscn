@@ -1,14 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://fqpcgptwi4a1"]
+[gd_scene load_steps=9 format=3 uid="uid://fqpcgptwi4a1"]
 
 [ext_resource type="Texture2D" uid="uid://c42xcvx23aurj" path="res://assets/backgrounds/atrium rum pix.png" id="1_p4tqb"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_cddkd"]
-[ext_resource type="Script" uid="uid://sc0p5ofsur4" path="res://scenes/arrow_to_left_hall.gd" id="3_p4tqb"]
+[ext_resource type="Script" uid="uid://sc0p5ofsur4" path="res://scripts/arrow_to_left_hall.gd" id="3_p4tqb"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_cyldo"]
+[ext_resource type="Texture2D" uid="uid://pjlrir62e0gm" path="res://assets/sprites/atrium_poster.jpg" id="5_cddkd"]
+[ext_resource type="Script" uid="uid://0wwmg255t211" path="res://scenes/atrium_poster.gd" id="5_u7eu8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cddkd"]
 size = Vector2(137, 102)
 
-[node name="auditorium" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7eu8"]
+size = Vector2(213, 303)
+
+[node name="atrium" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -33,3 +38,15 @@ texture = ExtResource("4_cyldo")
 position = Vector2(-8.5, 303)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_cddkd")
+
+[node name="atrium_poster" type="Area2D" parent="."]
+script = ExtResource("5_u7eu8")
+
+[node name="Sprite2D" type="Sprite2D" parent="atrium_poster"]
+position = Vector2(461, -71)
+scale = Vector2(0.196777, 0.196777)
+texture = ExtResource("5_cddkd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="atrium_poster"]
+position = Vector2(463.5, -70.5)
+shape = SubResource("RectangleShape2D_u7eu8")

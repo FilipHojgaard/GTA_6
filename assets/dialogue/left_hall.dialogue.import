@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c368sep57w2o"
+path="res://.godot/imported/left_hall.dialogue-24c1d49f66abf1517daac8c42f4e7a8a.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/left_hall.dialogue"
+dest_files=["res://.godot/imported/left_hall.dialogue-24c1d49f66abf1517daac8c42f4e7a8a.tres"]
+
+[params]
+
+defaults=true

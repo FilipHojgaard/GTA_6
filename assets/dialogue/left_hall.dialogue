@@ -1,0 +1,6 @@
+~ start
+if Singleton.left_hall_played == true:
+	=> END
+You: What a long hallway. I wnonder what is at the end.
+do Singleton.invoke_left_hall_played() 
+=> END

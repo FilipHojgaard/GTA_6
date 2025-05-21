@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b0ve1k7rj53gh"
+path="res://.godot/imported/atrium_about.dialogue-fb5e143ceca36a73990b270c4b7d2762.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/atrium_about.dialogue"
+dest_files=["res://.godot/imported/atrium_about.dialogue-fb5e143ceca36a73990b270c4b7d2762.tres"]
+
+[params]
+
+defaults=true
