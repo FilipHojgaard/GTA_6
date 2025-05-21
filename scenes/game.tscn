@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="3_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://c2veh68b2max4" path="res://assets/backgrounds/SUF død på bord lang pix.png" id="3_lnu2h"]
-[ext_resource type="Script" uid="uid://sc0p5ofsur4" path="res://scenes/arrow_to_left_hall.gd" id="4_gee14"]
+[ext_resource type="Script" path="res://scenes/arrow_to_left_hall.gd" id="4_gee14"]
 [ext_resource type="Script" uid="uid://oteacqjyawqv" path="res://scenes/arrow_to_right_hall.gd" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://dpa2lhjetn73i" path="res://scenes/phone_call.tscn" id="7_u5sy4"]
 
