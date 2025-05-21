@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://fqpcgptwi4a1"]
+
+[ext_resource type="Texture2D" uid="uid://c42xcvx23aurj" path="res://assets/backgrounds/atrium rum pix.png" id="1_p4tqb"]
+[ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_cddkd"]
+[ext_resource type="Script" uid="uid://sc0p5ofsur4" path="res://scenes/arrow_to_left_hall.gd" id="3_p4tqb"]
+[ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_cyldo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cddkd"]
+size = Vector2(137, 102)
+
+[node name="auditorium" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AuditoriumPix" type="Sprite2D" parent="."]
+position = Vector2(13, -24)
+scale = Vector2(0.76416, 0.76416)
+texture = ExtResource("1_p4tqb")
+
+[node name="inventory" parent="." instance=ExtResource("2_cddkd")]
+position = Vector2(639, 372)
+
+[node name="arrow_to_start" type="Area2D" parent="."]
+script = ExtResource("3_p4tqb")
+
+[node name="Sprite2D" type="Sprite2D" parent="arrow_to_start"]
+position = Vector2(-7, 303)
+rotation = 1.5708
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_cyldo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="arrow_to_start"]
+position = Vector2(-8.5, 303)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_cddkd")

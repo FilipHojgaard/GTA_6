@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://dfjhtkla41llf"]
+
+[ext_resource type="Texture2D" uid="uid://cgbpuk7ykshoo" path="res://assets/backgrounds/kitchen outside pix.png" id="1_kfcrs"]
+[ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_lh61v"]
+[ext_resource type="Script" uid="uid://sc0p5ofsur4" path="res://scenes/arrow_to_left_hall.gd" id="3_kfcrs"]
+[ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_owrlr"]
+[ext_resource type="Script" uid="uid://cesb6gduayfm" path="res://scenes/enter_kitchen.gd" id="5_owrlr"]
+[ext_resource type="Texture2D" uid="uid://dgneucrslgd2a" path="res://assets/sprites/swedish cake pix.png" id="5_yg0aa"]
+[ext_resource type="Texture2D" uid="uid://cifspjcd416rd" path="res://assets/sprites/red_mess.png" id="6_owrlr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jac6f"]
+size = Vector2(130, 91)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4trwu"]
+size = Vector2(355, 507)
+
+[node name="auditorium" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AuditoriumPix" type="Sprite2D" parent="."]
+position = Vector2(13, -24)
+scale = Vector2(0.76416, 0.76416)
+texture = ExtResource("1_kfcrs")
+
+[node name="inventory" parent="." instance=ExtResource("2_lh61v")]
+position = Vector2(639, 372)
+
+[node name="arrow_to_hall_left" type="Area2D" parent="."]
+script = ExtResource("3_kfcrs")
+
+[node name="Sprite2D" type="Sprite2D" parent="arrow_to_hall_left"]
+position = Vector2(-471, -318)
+rotation = 3.14159
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_owrlr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="arrow_to_hall_left"]
+position = Vector2(-471, -318.5)
+shape = SubResource("RectangleShape2D_jac6f")
+
+[node name="enter_kitchen" type="Area2D" parent="."]
+script = ExtResource("5_owrlr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enter_kitchen"]
+position = Vector2(275.5, -163.5)
+shape = SubResource("RectangleShape2D_4trwu")
+
+[node name="cake" type="Sprite2D" parent="."]
+position = Vector2(-453, 3)
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("5_yg0aa")
+
+[node name="red_mess" type="Sprite2D" parent="."]
+position = Vector2(-416, 44)
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("6_owrlr")
+
+[node name="red_mess2" type="Sprite2D" parent="."]
+position = Vector2(-366, 287)
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("6_owrlr")
+
+[node name="red_mess3" type="Sprite2D" parent="."]
+position = Vector2(-391, 310)
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("6_owrlr")
+
+[node name="red_mess4" type="Sprite2D" parent="."]
+position = Vector2(-382, 28)
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("6_owrlr")
