@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://2awt71o4xy5o"]
+[gd_scene load_steps=17 format=3 uid="uid://2awt71o4xy5o"]
 
 [ext_resource type="Script" uid="uid://cimrdxu5ynf6m" path="res://scripts/intro.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_yqjtg"]
@@ -6,7 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://sc0p5ofsur4" path="res://scripts/arrow_to_left_hall.gd" id="4_gee14"]
 [ext_resource type="Script" uid="uid://oteacqjyawqv" path="res://scripts/arrow_to_right_hall.gd" id="4_iywne"]
-[ext_resource type="Script" uid="uid://b22mi88yy0vt6" path="res://scenes/door_handle.gd" id="7_u5sy4"]
+[ext_resource type="Script" uid="uid://b22mi88yy0vt6" path="res://scripts/door_handle.gd" id="7_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://cnjisl3x66cby" path="res://assets/sprites/glass knocked over pix.png" id="8_gee14"]
+[ext_resource type="Texture2D" uid="uid://bfpxdgf61phdm" path="res://assets/sprites/letter opener pix.png" id="9_0tnpc"]
+[ext_resource type="Script" uid="uid://dpbjhcusw3wc5" path="res://scripts/letter_opener.gd" id="9_vtaks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u5sy4"]
 size = Vector2(159, 121)
@@ -16,6 +19,25 @@ size = Vector2(416, 306.667)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tnpc"]
 size = Vector2(194.75, 175.5)
+
+[sub_resource type="GDScript" id="GDScript_gee14"]
+script/source = "extends Area2D
+ 
+func _ready() -> void:
+	connect(\"input_event\", _on_input_event)
+	input_pickable = true
+ 
+func _on_input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		var resource = preload(\"res://assets/dialogue/spilled_glass.dialogue\")
+		DialogueManager.show_example_dialogue_balloon(resource)
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtaks"]
+size = Vector2(67, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvpfn"]
+size = Vector2(66, 48)
 
 [node name="start" type="Node2D"]
 script = ExtResource("1_p57ef")
@@ -64,3 +86,27 @@ script = ExtResource("7_u5sy4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="door_handle"]
 position = Vector2(-63, 138)
 shape = SubResource("RectangleShape2D_0tnpc")
+
+[node name="spilled_glass" type="Area2D" parent="."]
+script = SubResource("GDScript_gee14")
+
+[node name="Sprite2D" type="Sprite2D" parent="spilled_glass"]
+position = Vector2(500, 187)
+scale = Vector2(0.0874023, 0.0874023)
+texture = ExtResource("8_gee14")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spilled_glass"]
+position = Vector2(501.5, 188)
+shape = SubResource("RectangleShape2D_vtaks")
+
+[node name="letter_opener" type="Area2D" parent="."]
+script = ExtResource("9_vtaks")
+
+[node name="Sprite2D" type="Sprite2D" parent="letter_opener"]
+position = Vector2(95, 339)
+scale = Vector2(0.0751953, 0.0512695)
+texture = ExtResource("9_0tnpc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="letter_opener"]
+position = Vector2(94, 339)
+shape = SubResource("RectangleShape2D_kvpfn")

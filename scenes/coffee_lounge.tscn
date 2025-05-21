@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://mry3sduil4vu" path="res://scripts/to_auditorium.gd" id="5_yrn8g"]
 [ext_resource type="PackedScene" uid="uid://dbfrwsoyscb3m" path="res://scenes/cup.tscn" id="6_5hc10"]
 [ext_resource type="Texture2D" uid="uid://dualf34c1gnpy" path="res://assets/sprites/paper_floor.png" id="7_sy0s1"]
-[ext_resource type="Script" path="res://scenes/paper_world.gd" id="7_tvjlp"]
+[ext_resource type="Script" uid="uid://cmip7bvfeg8r5" path="res://scripts/paper_world.gd" id="7_tvjlp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tvjlp"]
 size = Vector2(127, 104)

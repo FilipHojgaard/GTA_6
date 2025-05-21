@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cxuvgflfymdah" path="res://scripts/arrow_to_outside_kitchenette.gd" id="3_kfcrs"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_owrlr"]
 [ext_resource type="Texture2D" uid="uid://dgneucrslgd2a" path="res://assets/sprites/swedish cake pix.png" id="5_yg0aa"]
-[ext_resource type="Script" uid="uid://dslhgn5h4gtax" path="res://scenes/cake_inside.gd" id="6_jac6f"]
+[ext_resource type="Script" uid="uid://dslhgn5h4gtax" path="res://scripts/cake_inside.gd" id="6_jac6f"]
 [ext_resource type="Texture2D" uid="uid://cifspjcd416rd" path="res://assets/sprites/red_mess.png" id="6_owrlr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mrby"]

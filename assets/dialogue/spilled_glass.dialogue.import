@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bypqm1tiyo7e6"
+path="res://.godot/imported/spilled_glass.dialogue-0a40c3fd630171321e99235b669a075a.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/spilled_glass.dialogue"
+dest_files=["res://.godot/imported/spilled_glass.dialogue-0a40c3fd630171321e99235b669a075a.tres"]
+
+[params]
+
+defaults=true
