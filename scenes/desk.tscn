@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cah5et5hn65qn" path="res://assets/backgrounds/desk_background.png" id="1_8atfi"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_vxfw4"]
-[ext_resource type="Script" uid="uid://oteacqjyawqv" path="res://scenes/arrow_to_right_hall.gd" id="3_8atfi"]
+[ext_resource type="Script" uid="uid://oteacqjyawqv" path="res://scripts/arrow_to_right_hall.gd" id="3_8atfi"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_y0kep"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_38lhl"]

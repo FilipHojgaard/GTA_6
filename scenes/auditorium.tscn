@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dwbmlvdunnywf" path="res://assets/backgrounds/auditorium pix.png" id="1_w616x"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_rwbqi"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="3_5ntih"]
-[ext_resource type="Script" uid="uid://dxxwv3l74ub7w" path="res://scenes/arrow_to_lounge.gd" id="3_38lhl"]
+[ext_resource type="Script" uid="uid://dxxwv3l74ub7w" path="res://scripts/arrow_to_lounge.gd" id="3_38lhl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_38lhl"]
 radius = 47.0

@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://djxnmy28hp4pu" path="res://assets/backgrounds/right_floor.png" id="1_24sry"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_prr3v"]
-[ext_resource type="Script" uid="uid://y4kr7jsa0lq2" path="res://scenes/arrow_to_start.gd" id="3_lqmso"]
+[ext_resource type="Script" uid="uid://y4kr7jsa0lq2" path="res://scripts/arrow_to_start.gd" id="3_lqmso"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_45ka5"]
-[ext_resource type="Script" uid="uid://bphbnmec3muej" path="res://scenes/arrow_to_203.gd" id="5_lqmso"]
-[ext_resource type="Script" uid="uid://bhmtcmu0tvo1j" path="res://scenes/to_desk.gd" id="5_prr3v"]
-[ext_resource type="Script" uid="uid://57u2ronni14s" path="res://scenes/balloon_script.gd" id="7_6xx5m"]
+[ext_resource type="Script" uid="uid://bphbnmec3muej" path="res://scripts/arrow_to_203.gd" id="5_lqmso"]
+[ext_resource type="Script" uid="uid://bhmtcmu0tvo1j" path="res://scripts/to_desk.gd" id="5_prr3v"]
+[ext_resource type="Script" uid="uid://57u2ronni14s" path="res://scripts/balloon_script.gd" id="7_6xx5m"]
 [ext_resource type="Texture2D" uid="uid://gbgpyi5ibieh" path="res://assets/sprites/balloon pix.png" id="7_45ka5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_38lhl"]

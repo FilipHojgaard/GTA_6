@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dpa2lhjetn73i"]
 
-[ext_resource type="Script" uid="uid://gkl4jvf46meu" path="res://scenes/phone_start.gd" id="1_687qb"]
+[ext_resource type="Script" uid="uid://gkl4jvf46meu" path="res://scripts/phone_start.gd" id="1_687qb"]
 [ext_resource type="Texture2D" uid="uid://c7wtmbwxtorbg" path="res://assets/sprites/phone_in_hand.png" id="1_lwrnd"]
 
 [node name="phone_call" type="Area2D"]
