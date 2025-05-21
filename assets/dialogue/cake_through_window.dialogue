@@ -1,2 +1,4 @@
 ~ start
-You: [[Wow!|Hey!]] That looks like a nice red cake. If only it wasn't behind this glass I could have some. => END
+You: [[Wow!|Hey!]] That looks like a nice red cake. Finally something good happens to me! I guess no one is alive to mind if I have a taste.
+You: If only it wasn't behind this glass, I could have some.
+=> END

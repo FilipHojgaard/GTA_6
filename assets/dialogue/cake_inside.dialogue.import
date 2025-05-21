@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://5rxutfb54jrf"
+path="res://.godot/imported/cake_inside.dialogue-bd3489162958e2d38627bd0649d68fea.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/cake_inside.dialogue"
+dest_files=["res://.godot/imported/cake_inside.dialogue-bd3489162958e2d38627bd0649d68fea.tres"]
+
+[params]
+
+defaults=true
