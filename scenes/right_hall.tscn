@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b2jn2cyy5gw14"]
+[gd_scene load_steps=13 format=3 uid="uid://b2jn2cyy5gw14"]
 
 [ext_resource type="Texture2D" uid="uid://djxnmy28hp4pu" path="res://assets/backgrounds/right_floor.png" id="1_24sry"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_prr3v"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bhmtcmu0tvo1j" path="res://scripts/to_desk.gd" id="5_prr3v"]
 [ext_resource type="Script" uid="uid://57u2ronni14s" path="res://scripts/balloon_script.gd" id="7_6xx5m"]
 [ext_resource type="Texture2D" uid="uid://gbgpyi5ibieh" path="res://assets/sprites/balloon pix.png" id="7_45ka5"]
+[ext_resource type="Texture2D" uid="uid://bdfesxjltw7hq" path="res://assets/sprites/green syringe pix.png" id="7_kk6be"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_38lhl"]
 radius = 47.0
@@ -63,6 +64,11 @@ script = ExtResource("5_prr3v")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="to_desk"]
 position = Vector2(-329, 30)
 shape = SubResource("RectangleShape2D_24sry")
+
+[node name="Sprite2D" type="Sprite2D" parent="to_desk"]
+position = Vector2(-296, 39)
+scale = Vector2(0.0961914, 0.0961914)
+texture = ExtResource("7_kk6be")
 
 [node name="balloon" type="Area2D" parent="."]
 script = ExtResource("7_6xx5m")

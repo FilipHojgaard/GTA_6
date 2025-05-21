@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://djql68c2h30af"]
+[gd_scene load_steps=8 format=3 uid="uid://djql68c2h30af"]
 
 [ext_resource type="Texture2D" uid="uid://b4d3qb8cpvlyn" path="res://assets/backgrounds/coffee_lounge.png" id="1_0y3a8"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_yrn8g"]
 [ext_resource type="Script" uid="uid://sc0p5ofsur4" path="res://scripts/arrow_to_left_hall.gd" id="3_yrn8g"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_sy0s1"]
 [ext_resource type="Script" uid="uid://mry3sduil4vu" path="res://scripts/to_auditorium.gd" id="5_yrn8g"]
+[ext_resource type="PackedScene" uid="uid://dbfrwsoyscb3m" path="res://scenes/cup.tscn" id="6_5hc10"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_38lhl"]
 radius = 47.0
@@ -49,3 +50,6 @@ texture = ExtResource("4_sy0s1")
 position = Vector2(-515, 62.001)
 rotation = 3.3807
 shape = SubResource("CircleShape2D_38lhl")
+
+[node name="cup" parent="." instance=ExtResource("6_5hc10")]
+position = Vector2(209, 456)

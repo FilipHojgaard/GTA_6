@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://2awt71o4xy5o"]
+[gd_scene load_steps=10 format=3 uid="uid://2awt71o4xy5o"]
 
 [ext_resource type="Script" uid="uid://cimrdxu5ynf6m" path="res://scripts/intro.gd" id="1_p57ef"]
-[ext_resource type="PackedScene" uid="uid://dbfrwsoyscb3m" path="res://scenes/cup.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://c4m1ffxan5ccv" path="res://assets/backgrounds/suf_in_aquarium.png" id="3_gee14"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="3_lbhrr"]
@@ -55,9 +54,6 @@ texture = ExtResource("3_lbhrr")
 position = Vector2(757, -174.5)
 scale = Vector2(0.375, 0.375)
 shape = SubResource("RectangleShape2D_gee14")
-
-[node name="cup" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(825, 229)
 
 [node name="phone_call" parent="." instance=ExtResource("7_u5sy4")]
 position = Vector2(37, 151)
