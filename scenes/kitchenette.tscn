@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cokfeobvfpm8u" path="res://assets/backgrounds/kitchen inside pix.png" id="1_6resm"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_lh61v"]
-[ext_resource type="Script" uid="uid://cxuvgflfymdah" path="res://scenes/arrow_to_outside_kitchenette.gd" id="3_kfcrs"]
+[ext_resource type="Script" uid="uid://cxuvgflfymdah" path="res://scripts/arrow_to_outside_kitchenette.gd" id="3_kfcrs"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_owrlr"]
 [ext_resource type="Texture2D" uid="uid://dgneucrslgd2a" path="res://assets/sprites/swedish cake pix.png" id="5_yg0aa"]
 [ext_resource type="Texture2D" uid="uid://cifspjcd416rd" path="res://assets/sprites/red_mess.png" id="6_owrlr"]

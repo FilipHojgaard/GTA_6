@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b56rwofwsgwsp"]
+[gd_scene load_steps=15 format=3 uid="uid://b56rwofwsgwsp"]
 
 [ext_resource type="Texture2D" uid="uid://beyb7pp4m8lcw" path="res://assets/backgrounds/signum 2nd floor left pix.png" id="1_1my5u"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_4mrby"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://cxuvgflfymdah" path="res://scripts/arrow_to_outside_kitchenette.gd" id="5_4mrby"]
 [ext_resource type="Script" uid="uid://5cqmt7sngp80" path="res://scripts/to_atrium.gd" id="6_5wf7x"]
 [ext_resource type="Script" uid="uid://dxxwv3l74ub7w" path="res://scripts/arrow_to_lounge.gd" id="6_hk2ef"]
+[ext_resource type="Script" uid="uid://jgtf1unmwur7" path="res://scenes/bloody_footstep_dialogue.gd" id="8_2leyr"]
+[ext_resource type="Texture2D" uid="uid://bbxtmomtwo7u4" path="res://assets/sprites/bloody footprints pix.png" id="8_dxeio"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mrby"]
 size = Vector2(138, 103)
@@ -19,6 +21,9 @@ size = Vector2(89, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dxeio"]
 size = Vector2(92, 131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2leyr"]
+size = Vector2(122, 162.944)
 
 [node name="auditorium" type="Node2D"]
 
@@ -51,14 +56,14 @@ rotation = -3.14159
 script = ExtResource("5_4mrby")
 
 [node name="Sprite2D" type="Sprite2D" parent="arrow_to_forward"]
-position = Vector2(114.41, -300.59)
-rotation = 1.31772
+position = Vector2(159.627, -233.373)
+rotation = 0.847203
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_hk2ef")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="arrow_to_forward"]
-position = Vector2(112.184, -301.098)
-rotation = -0.261799
+position = Vector2(157.401, -233.881)
+rotation = -0.732316
 shape = SubResource("RectangleShape2D_5wf7x")
 
 [node name="arrow_to_lounge" type="Area2D" parent="."]
@@ -80,3 +85,32 @@ script = ExtResource("6_5wf7x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_dxeio")
+
+[node name="Bloody Footsteps" type="Area2D" parent="."]
+script = ExtResource("8_2leyr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bloody Footsteps"]
+position = Vector2(21.5585, 297)
+rotation = -3.24522
+scale = Vector2(0.192981, 0.118619)
+texture = ExtResource("8_dxeio")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloody Footsteps"]
+position = Vector2(30.5585, 290.5)
+shape = SubResource("RectangleShape2D_2leyr")
+
+[node name="Bloody Footsteps2" type="Area2D" parent="."]
+position = Vector2(27.5585, 43)
+script = ExtResource("8_2leyr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bloody Footsteps2"]
+position = Vector2(-61, 156)
+rotation = -3.72869
+scale = Vector2(0.151707, 0.118619)
+texture = ExtResource("8_dxeio")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloody Footsteps2"]
+position = Vector2(-49.1747, 174.98)
+rotation = -0.742335
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_2leyr")
