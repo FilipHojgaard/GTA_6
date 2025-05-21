@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d14kawvftw81m"
+path="res://.godot/imported/signum_website.dialogue-fac5750aa3aa1a64cc5fcf2bcea55eaf.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/signum_website.dialogue"
+dest_files=["res://.godot/imported/signum_website.dialogue-fac5750aa3aa1a64cc5fcf2bcea55eaf.tres"]
+
+[params]
+
+defaults=true
