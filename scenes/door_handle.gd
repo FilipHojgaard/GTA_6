@@ -10,11 +10,11 @@ func _on_input_event(_viewport, event, _shape_idx):
 		if Singleton.inventory["key"] == true:
 			var resource = preload("res://assets/dialogue/door_push_door.dialogue")
 			DialogueManager.show_example_dialogue_balloon(resource)
-			get_tree().change_scene_to_file("res://scenes/winning_scene.tscn")
+			get_tree().change_scene_to_file("res://scenes/suf_office.tscn")
 		elif knocking_count == 3:
 			var resource = preload("res://assets/dialogue/door_push_door.dialogue")
 			DialogueManager.show_example_dialogue_balloon(resource)
-			get_tree().change_scene_to_file("res://scenes/winning_scene.tscn")
+			get_tree().change_scene_to_file("res://scenes/suf_office.tscn")
 		else:
 			knocking_count += 1
 			var resource = preload("res://assets/dialogue/door_locked.dialogue")

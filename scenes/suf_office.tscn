@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvniprj0pla67"]
+
+[ext_resource type="Texture2D" uid="uid://dabyn861wk1rs" path="res://assets/backgrounds/winning scene pix.png" id="1_2j78h"]
+[ext_resource type="Script" uid="uid://bc41s61vtn405" path="res://scenes/go_to_win.gd" id="2_2j78h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yfsyi"]
+radius = 221.002
+
+[node name="suf_office" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AuditoriumPix" type="Sprite2D" parent="."]
+position = Vector2(13, -24)
+scale = Vector2(0.76416, 0.76416)
+texture = ExtResource("1_2j78h")
+
+[node name="win" type="Area2D" parent="."]
+script = ExtResource("2_2j78h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="win"]
+position = Vector2(6, 26)
+shape = SubResource("CircleShape2D_yfsyi")

@@ -1,17 +1,81 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvniprj0pla67"]
+[gd_scene load_steps=9 format=3 uid="uid://bxvgd4ab85g60"]
 
-[ext_resource type="Texture2D" uid="uid://dabyn861wk1rs" path="res://assets/backgrounds/winning scene pix.png" id="1_0rqyc"]
+[ext_resource type="Texture2D" uid="uid://c2o03rxrxloe0" path="res://assets/backgrounds/blue.jpg" id="1_dt531"]
 [ext_resource type="AudioStream" uid="uid://c4fjwvyc4b6fx" path="res://assets/sfx/win_song.mp3" id="2_fpoli"]
+[ext_resource type="Texture2D" uid="uid://dow5uf3yir1wu" path="res://assets/sprites/win.png" id="3_7jntl"]
+[ext_resource type="Texture2D" uid="uid://cdk5poegj4ljs" path="res://assets/sprites/suf_happy.png" id="4_uewhj"]
+[ext_resource type="Texture2D" uid="uid://gbgpyi5ibieh" path="res://assets/sprites/balloon pix.png" id="5_7jntl"]
 
-[node name="winning_scene" type="Node2D"]
+[sub_resource type="Animation" id="Animation_uewhj"]
+resource_name = "win_balloon"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-217, 848), Vector2(-297, -1066)]
+}
+
+[sub_resource type="Animation" id="Animation_gapqm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-217, 848)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_13byk"]
+_data = {
+&"RESET": SubResource("Animation_gapqm"),
+&"win_balloon": SubResource("Animation_uewhj")
+}
+
+[node name="suf_office" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AuditoriumPix" type="Sprite2D" parent="."]
-position = Vector2(13, -24)
-scale = Vector2(0.76416, 0.76416)
-texture = ExtResource("1_0rqyc")
+position = Vector2(28, -45.9999)
+scale = Vector2(0.285347, 0.285347)
+texture = ExtResource("1_dt531")
 
 [node name="WinSong" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_fpoli")
 autoplay = true
+
+[node name="Win" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-258, -203)
+scale = Vector2(0.730469, 0.730469)
+texture = ExtResource("3_7jntl")
+
+[node name="SufHappy" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(405, -64)
+scale = Vector2(0.706055, 0.706055)
+texture = ExtResource("4_uewhj")
+
+[node name="BalloonPix" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-217, 848)
+scale = Vector2(0.751953, 0.751953)
+texture = ExtResource("5_7jntl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BalloonPix"]
+libraries = {
+&"": SubResource("AnimationLibrary_13byk")
+}
+autoplay = "win_balloon"
