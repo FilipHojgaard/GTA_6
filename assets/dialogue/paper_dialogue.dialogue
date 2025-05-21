@@ -1,2 +1,8 @@
 ~ start
-Paper: bla bla bla => END
+You: What is this paper-thing. Maybe it holds another clue?
+You: This looks like it is a paper from DMVO.
+Paper: DMVO works to ensure that we have a secure and trustworthy supply chain of medicine in Europe and Denmark. This is done by operating and developing the Danish verification system. Simply put, the verification system works by having pharmacies and hospitals scan a 2D data matrix code on the pack of the medicine and thereby verifying if the pack is legitimate or not. DMVO is a non-profit organisation and the board consists of Lif, Association for Generics, Association for Parallel Distributers, Pharmaceutical association, Amgros, Megros.
+- Ok, cool
+- That is useful information
+	DMVO: We sure are useful, aren't we?
+=> END

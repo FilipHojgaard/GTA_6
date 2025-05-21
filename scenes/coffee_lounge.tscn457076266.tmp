@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://djql68c2h30af"]
+[gd_scene load_steps=11 format=3 uid="uid://djql68c2h30af"]
 
 [ext_resource type="Texture2D" uid="uid://b4d3qb8cpvlyn" path="res://assets/backgrounds/coffee_lounge.png" id="1_0y3a8"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_yrn8g"]
@@ -7,10 +7,7 @@
 [ext_resource type="Script" uid="uid://mry3sduil4vu" path="res://scripts/to_auditorium.gd" id="5_yrn8g"]
 [ext_resource type="PackedScene" uid="uid://dbfrwsoyscb3m" path="res://scenes/cup.tscn" id="6_5hc10"]
 [ext_resource type="Texture2D" uid="uid://dualf34c1gnpy" path="res://assets/sprites/paper_floor.png" id="7_sy0s1"]
-[ext_resource type="Script" uid="uid://cmip7bvfeg8r5" path="res://scripts/paper_world.gd" id="7_tvjlp"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvjlp"]
-size = Vector2(127, 104)
+[ext_resource type="Script" path="res://scenes/paper_world.gd" id="7_tvjlp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_38lhl"]
 radius = 47.0
@@ -41,8 +38,8 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_sy0s1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="arrow_to_start"]
-position = Vector2(-291.5, -4.99972)
-shape = SubResource("RectangleShape2D_tvjlp")
+position = Vector2(-291, -1.99984)
+shape = SubResource("CircleShape2D_38lhl")
 
 [node name="to_auditorium" type="Area2D" parent="arrow_to_start"]
 rotation = 4.71239
