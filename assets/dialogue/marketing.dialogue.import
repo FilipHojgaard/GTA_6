@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://db6cwv5x00qgt"
+path="res://.godot/imported/marketing.dialogue-6265cae60c05a7822784dbb5b72f8282.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/marketing.dialogue"
+dest_files=["res://.godot/imported/marketing.dialogue-6265cae60c05a7822784dbb5b72f8282.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b2v3102lvmajk"
+path="res://.godot/imported/letter_opener.dialogue-44bed97ecf3614b09d3ce75ec213c688.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/letter_opener.dialogue"
+dest_files=["res://.godot/imported/letter_opener.dialogue-44bed97ecf3614b09d3ce75ec213c688.tres"]
+
+[params]
+
+defaults=true
