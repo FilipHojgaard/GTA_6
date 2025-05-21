@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://sc0p5ofsur4" path="res://scripts/arrow_to_left_hall.gd" id="4_gee14"]
 [ext_resource type="Script" uid="uid://oteacqjyawqv" path="res://scripts/arrow_to_right_hall.gd" id="4_iywne"]
-[ext_resource type="Script" uid="uid://b22mi88yy0vt6" path="res://scripts/door_handle.gd" id="7_u5sy4"]
+[ext_resource type="Script" path="res://scripts/door_handle.gd" id="7_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://cnjisl3x66cby" path="res://assets/sprites/glass knocked over pix.png" id="8_gee14"]
 [ext_resource type="Texture2D" uid="uid://bfpxdgf61phdm" path="res://assets/sprites/letter opener pix.png" id="9_0tnpc"]
-[ext_resource type="Script" uid="uid://dpbjhcusw3wc5" path="res://scripts/letter_opener.gd" id="9_vtaks"]
+[ext_resource type="Script" path="res://scripts/letter_opener.gd" id="9_vtaks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u5sy4"]
 size = Vector2(159, 121)

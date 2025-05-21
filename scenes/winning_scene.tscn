@@ -6,6 +6,21 @@
 [ext_resource type="Texture2D" uid="uid://cdk5poegj4ljs" path="res://assets/sprites/suf_happy.png" id="4_uewhj"]
 [ext_resource type="Texture2D" uid="uid://gbgpyi5ibieh" path="res://assets/sprites/balloon pix.png" id="5_7jntl"]
 
+[sub_resource type="Animation" id="Animation_gapqm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-217, 848)]
+}
+
 [sub_resource type="Animation" id="Animation_uewhj"]
 resource_name = "win_balloon"
 length = 3.0
@@ -20,21 +35,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-217, 848), Vector2(-297, -1066)]
-}
-
-[sub_resource type="Animation" id="Animation_gapqm"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-217, 848)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_13byk"]
