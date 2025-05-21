@@ -7,7 +7,7 @@ var intro_played = false
 var inventory = {
 	"cup" = false,
 	"key" = false,
-	"flashlight" = false
+	"paper" = false
 }
 
 func invoke_intro_played():
