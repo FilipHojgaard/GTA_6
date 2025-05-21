@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://docbujyyd2l80"]
+
+[ext_resource type="Texture2D" uid="uid://d0xihamltqdex" path="res://assets/backgrounds/signum_website.png" id="1_1s8m7"]
+[ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_vergt"]
+[ext_resource type="Script" uid="uid://bhmtcmu0tvo1j" path="res://scripts/to_desk.gd" id="3_1s8m7"]
+[ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_8ow1j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cddkd"]
+size = Vector2(137, 102)
+
+[node name="auditorium" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AuditoriumPix" type="Sprite2D" parent="."]
+position = Vector2(13, -24)
+scale = Vector2(0.76416, 0.76416)
+texture = ExtResource("1_1s8m7")
+
+[node name="inventory" parent="." instance=ExtResource("2_vergt")]
+position = Vector2(639, 372)
+
+[node name="arrow_to_start" type="Area2D" parent="."]
+script = ExtResource("3_1s8m7")
+
+[node name="Sprite2D" type="Sprite2D" parent="arrow_to_start"]
+position = Vector2(-7, 303)
+rotation = 1.5708
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_8ow1j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="arrow_to_start"]
+position = Vector2(-8.5, 303)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_cddkd")
