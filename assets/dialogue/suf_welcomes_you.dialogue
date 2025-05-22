@@ -1,2 +1,10 @@
 ~ start
-SUF: Oh hi! Good job, you completed the onboarding! We really look forward to having you here. 
+SUF: Hnngr... I must have dozed of after the party... Thanks for waking me up.
+SUF: Why do you have my keys? Anyway, good job, you completed the onboarding! 
+SUF: I am The SUF. I am the guy that ties the Second floor together. I hope you had a good onboarding and learned about our departments here on the second floor. 
+SUF: I love all my colleagues in all the departments
+> DMVO\n> Atrium\n> SPI\n> Marketing\n> Signum
+SUF: We are only one part of Lif. There are so much more to explore here in Life Science Huset, and so many more people to meet. 
+SUF: Make sure to also try GTA VII. 
+SUF: Anyway, we really look forward to having you here. Now hand me the keys.
+=> END
