@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://docbujyyd2l80"]
 
-[ext_resource type="Texture2D" uid="uid://d0xihamltqdex" path="res://assets/backgrounds/signum_website.png" id="1_1s8m7"]
 [ext_resource type="Script" uid="uid://lnvv2yv6i6ns" path="res://scenes/signum_website.gd" id="1_vergt"]
+[ext_resource type="Texture2D" uid="uid://df57wcn5xi8ft" path="res://assets/backgrounds/computer_3.png" id="2_2dnc0"]
 [ext_resource type="PackedScene" uid="uid://cgaku5310vt5q" path="res://scenes/inventory.tscn" id="2_vergt"]
 [ext_resource type="Script" uid="uid://bhmtcmu0tvo1j" path="res://scripts/to_desk.gd" id="3_1s8m7"]
 [ext_resource type="Texture2D" uid="uid://de00i76icjm2n" path="res://assets/sprites/arrow.webp" id="4_8ow1j"]
@@ -15,9 +15,9 @@ script = ExtResource("1_vergt")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AuditoriumPix" type="Sprite2D" parent="."]
-position = Vector2(13, -24)
-scale = Vector2(0.76416, 0.76416)
-texture = ExtResource("1_1s8m7")
+position = Vector2(6, 15)
+scale = Vector2(0.756134, 0.756134)
+texture = ExtResource("2_2dnc0")
 
 [node name="inventory" parent="." instance=ExtResource("2_vergt")]
 position = Vector2(639, 372)

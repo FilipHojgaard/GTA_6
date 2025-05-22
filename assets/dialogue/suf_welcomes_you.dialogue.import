@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://crd3dkxtrnpdj"
+path="res://.godot/imported/suf_welcomes_you.dialogue-f4cdf6c1c1d04eda9fde65be60117042.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/suf_welcomes_you.dialogue"
+dest_files=["res://.godot/imported/suf_welcomes_you.dialogue-f4cdf6c1c1d04eda9fde65be60117042.tres"]
+
+[params]
+
+defaults=true

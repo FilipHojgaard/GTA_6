@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bxvgd4ab85g60"]
+[gd_scene load_steps=10 format=3 uid="uid://bxvgd4ab85g60"]
 
 [ext_resource type="Texture2D" uid="uid://c2o03rxrxloe0" path="res://assets/backgrounds/blue.jpg" id="1_dt531"]
+[ext_resource type="Script" uid="uid://cxu3bna13m703" path="res://scenes/winning_suf.gd" id="1_uewhj"]
 [ext_resource type="AudioStream" uid="uid://c4fjwvyc4b6fx" path="res://assets/sfx/win_song.mp3" id="2_fpoli"]
 [ext_resource type="Texture2D" uid="uid://dow5uf3yir1wu" path="res://assets/sprites/win.png" id="3_7jntl"]
 [ext_resource type="Texture2D" uid="uid://cdk5poegj4ljs" path="res://assets/sprites/suf_happy.png" id="4_uewhj"]
@@ -44,6 +45,7 @@ _data = {
 }
 
 [node name="suf_office" type="Node2D"]
+script = ExtResource("1_uewhj")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

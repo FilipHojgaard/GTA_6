@@ -1,6 +1,6 @@
 ~ start
 if Singleton.task_played == true
 	=> END
-You: My task!? Oh he is right there. But how do i get in? He is behind the glass...
+You: My task!? Oh he is right there. But how do I get in? He is behind the glass...
 do Singleton.invoke_task_played()
 => END

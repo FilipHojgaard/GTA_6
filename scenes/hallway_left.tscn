@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b56rwofwsgwsp"]
+[gd_scene load_steps=20 format=3 uid="uid://b56rwofwsgwsp"]
 
 [ext_resource type="Texture2D" uid="uid://beyb7pp4m8lcw" path="res://assets/backgrounds/signum 2nd floor left pix.png" id="1_1my5u"]
 [ext_resource type="Script" uid="uid://bokd2kkuqej5g" path="res://scenes/hallway_left.gd" id="1_t58we"]
@@ -10,6 +10,9 @@
 [ext_resource type="Script" uid="uid://dxxwv3l74ub7w" path="res://scripts/arrow_to_lounge.gd" id="6_hk2ef"]
 [ext_resource type="Script" path="res://scripts/bloody_footstep_dialogue.gd" id="8_2leyr"]
 [ext_resource type="Texture2D" uid="uid://bbxtmomtwo7u4" path="res://assets/sprites/bloody footprints pix.png" id="8_dxeio"]
+[ext_resource type="Script" uid="uid://bkhvoel4o237v" path="res://scenes/bell.gd" id="11_id8vl"]
+[ext_resource type="Texture2D" uid="uid://sl88bvrip36s" path="res://assets/sprites/bell.png" id="12_7f8fn"]
+[ext_resource type="AudioStream" uid="uid://ckw55u5b4tkh0" path="res://assets/sfx/bell_sfx.mp3" id="13_ris24"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mrby"]
 size = Vector2(138, 103)
@@ -21,10 +24,13 @@ size = Vector2(95.349, 133.914)
 size = Vector2(89, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dxeio"]
-size = Vector2(92, 131)
+size = Vector2(76, 121)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2leyr"]
 size = Vector2(122, 162.944)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oy1gm"]
+radius = 44.0114
 
 [node name="hall_left" type="Node2D"]
 script = ExtResource("1_t58we")
@@ -86,6 +92,7 @@ position = Vector2(-40, -93.5)
 script = ExtResource("6_5wf7x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 5)
 shape = SubResource("RectangleShape2D_dxeio")
 
 [node name="Bloody Footsteps" type="Area2D" parent="."]
@@ -115,3 +122,18 @@ texture = ExtResource("8_dxeio")
 position = Vector2(-49.1747, 174.98)
 rotation = -0.742335
 shape = SubResource("RectangleShape2D_2leyr")
+
+[node name="bell" type="Area2D" parent="."]
+script = ExtResource("11_id8vl")
+
+[node name="Sprite2D" type="Sprite2D" parent="bell"]
+position = Vector2(-140, -145)
+scale = Vector2(0.140625, 0.140625)
+texture = ExtResource("12_7f8fn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bell"]
+position = Vector2(-140, -160)
+shape = SubResource("CircleShape2D_oy1gm")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="bell"]
+stream = ExtResource("13_ris24")
